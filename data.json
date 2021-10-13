@@ -8,10 +8,10 @@
             "technologies": ["Javascript", "CSS", "HTML", "Github", "Visual Studio Code"],
             "live_link": "https://pattherogue.github.io/Data-Pagination-and-Filtering/",
             "github_link": "https://github.com/pattherogue/Data-Pagination-and-Filtering",
-            "image_urls": [ "/static/img/Project_5_Bottom.jpg",
-                "/static/img/Project_5_Overview.jpg",
-                "/static/img/Project_5_Thumbnail.jpg"
-
+            "image_urls": [
+                "/static/img/Project_5_Thumbnail.jpg",
+                "/static/img/Project_5_Overview.jpg", 
+                "/static/img/Project_5_Bottom.jpg"
             ]
         },
 
@@ -24,7 +24,9 @@
             "live_link": "https://pattherogue.github.io/Interactive-Form-V2/",
             "github_link": "https://github.com/pattherogue/Interactive-Form-V2",
             "image_urls": [
-                
+                "/static/img/Project_4_Thumbnail.jpg",
+                "/static/img/Project_4_Overview.jpg",
+                "static/img?project_4_Bottom.jpg"
             ]
         }
     ]
