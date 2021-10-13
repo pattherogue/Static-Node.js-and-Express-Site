@@ -1,0 +1,13 @@
+{
+    "projects": [
+        {
+            "id": 0,
+            "project_name": "Data Pagination and Filtering",
+            "description": "fdalsfjsfja",
+            "comments": "jfkaldjfklaskjf",
+            "technologies": ["Javascript", "CSS", "HTML", "Github", "Visual Studio Code"],
+            "live_link": "https://pattherogue.github.io/Data-Pagination-and-Filtering/",
+            "github_link": "https://github.com/pattherogue/Data-Pagination-and-Filtering",
+        }
+    ]
+}
