@@ -64,7 +64,9 @@
             "technologies": ["Javascript", "CSS", "HTML", "GitHub", "Visual Studio Code"],
             "live_link": "https://pattherogue.github.io/OOP-Game-Show-App/",
             "image_urls": [
-               
+               "/static/img/Project_1_Thumbnail.jpg",
+               "static/img/Project_1_Overview.jpg",
+               "static/img/Project_1_Bottom.jpg"
             ]
         }
 
