@@ -18,6 +18,18 @@ app.get('/', (req, res, next) => {
     res.render('index', { projects });
 });
 /* "about" route */
+app.get('/about', (req, res, next) => {
+    res.render('about');
+});
 /* Dynamic "project" routes */
+app.get('/project/:id', (req, res, next) => {
+    const projectId = req.params.id;
+    const project = projects[id];
+        if (project) {
+            res.render('project', { projects })
+        } else {
+            next(newError(404));
+        }
+})
 
 /* listen port 3000 */
