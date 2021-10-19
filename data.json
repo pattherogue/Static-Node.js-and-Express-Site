@@ -38,9 +38,11 @@
             "technologies": ["Javascript", "CSS", "HTML", "Fetch and Public APIs", "OOP", "Github", "Visual Studio Code" ],
             "live_link": "https://pattherogue.github.io/Public-API-Request/",
             "image_urls": [
-                
+                "/static/img/Project_3_Thumbnail.jpg",
+                "static/img/Project_3_Overview.jpg",
+                "static/img/Project_3_Click.jpg"
             ] 
-        }
+        },
 
     ]
 }
