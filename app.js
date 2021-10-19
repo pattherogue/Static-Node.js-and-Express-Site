@@ -37,3 +37,27 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Application is now running on local host port: ${PORT}`)
 });
+
+/* Handle errors */
+/* custom new Error() */
+/* status property 404 */
+/* message property user friendly message */
+
+/* err.status property */
+/* err.message */
+/* log out err object's message and status */
+app.use((err, req, res, next) =>{
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') == 'development' ? err: {};
+    if(err.status === 404) {
+        res.status(err.statusCode);
+        err.message = 'Page not found.';
+        console.log(`${err.statusCode}: ${err.message}`);
+        res.render('page-not-found', {err});
+    } else {
+        res.status(err.statusCode || 500);
+        err.message = 'Problem with server.'
+        console.log(`{err.statusCOde}: ${err.message}`);
+        res.render('error', {err});
+    }
+});
