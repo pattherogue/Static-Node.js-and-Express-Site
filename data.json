@@ -28,6 +28,19 @@
                 "/static/img/Project_4_Overview.jpg",
                 "static/img?project_4_Bottom.jpg"
             ]
+        },
+
+        {
+            "id": 2,
+            "project_name": "Public API Request",
+            "description": "jfkdajflkdjfncaaf",
+            "comments": "fjdkjalcsz",
+            "technologies": ["Javascript", "CSS", "HTML", "Fetch and Public APIs", "OOP", "Github", "Visual Studio Code" ],
+            "live_link": "https://pattherogue.github.io/Public-API-Request/",
+            "image_urls": [
+                
+            ] 
         }
+
     ]
 }
