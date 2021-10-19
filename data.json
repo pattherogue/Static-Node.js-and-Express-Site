@@ -51,9 +51,13 @@
             "technologies": ["Javascript", "CSS", "HTML", "GitHub", "Visual Studio Code"],
             "live_link": "https://pattherogue.github.io/Random-Quote-Generator/",
             "image_urls": [
-                
+                "/static/img/Project_2_Thumbnail.jpg",
+                "/static/img/Project_2_Overview.jpg",
+                "/static/img/Project_2_Bottom.jpg"
             ]
-        }
+        },
+
+        
 
     ]
 }
