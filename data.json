@@ -44,5 +44,16 @@
             ] 
         },
 
+        {
+            "id": 3,
+            "project_name": "Random Quote Generator",
+            "description": "fjdajwieowerw",
+            "technologies": ["Javascript", "CSS", "HTML", "GitHub", "Visual Studio Code"],
+            "live_link": "https://pattherogue.github.io/Random-Quote-Generator/",
+            "image_urls": [
+                
+            ]
+        }
+
     ]
 }
