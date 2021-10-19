@@ -30,6 +30,10 @@ app.get('/project/:id', (req, res, next) => {
         } else {
             next(newError(404));
         }
-})
+});
 
 /* listen port 3000 */
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Application is now running on local host port: ${PORT}`)
+});
