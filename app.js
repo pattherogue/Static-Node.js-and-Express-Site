@@ -11,3 +11,13 @@ const { projects } = require('./data.json');
 app.set('view engine', 'pug');
 /* static route and express.static method serve public folder */
 app.use('/static', express.static('public'));
+
+/* Set routes */
+/* "index" route */
+app.get('/', (req, res, next) => {
+    res.render('index', { projects });
+});
+/* "about" route */
+/* Dynamic "project" routes */
+
+/* listen port 3000 */
