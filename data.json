@@ -57,7 +57,18 @@
             ]
         },
 
-        
+        {
+            "id": 4,
+            "project_name": "Random Quote Generator",
+            "description": "fjdajarfacdsdwerw",
+            "technologies": ["Javascript", "CSS", "HTML", "GitHub", "Visual Studio Code"],
+            "live_link": "https://pattherogue.github.io/OOP-Game-Show-App/",
+            "image_urls": [
+               
+            ]
+        }
+
+
 
     ]
 }
