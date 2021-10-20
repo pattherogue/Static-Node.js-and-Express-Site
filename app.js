@@ -32,13 +32,20 @@ app.get('/project/:id', (req, res, next) => {
         }
 });
 
-/* listen port 3000 */
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Application is now running on local host port: ${PORT}`)
+/* show 500 error */
+app.get('/error', (req, res, next) => {
+    const err = new Error();
+    err.message = 'Custom 500 error thrown'
+    err.status = 500;
+    throw err;
 });
 
-/* Handle errors */
+/* 404 error handle */
+app.use((req, res, next) => {
+    next(newError(404));
+});
+
+/* Global error handler */
 /* custom new Error() */
 app.use((err, req, res, next) =>{
     res.locals.message = err.message;
@@ -61,4 +68,10 @@ app.use((err, req, res, next) =>{
         console.log(`{err.statusCOde}: ${err.message}`);
         res.render('error', {err});
     }
+});
+
+/* listen port 3000 */
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Application is now running on local host port: ${PORT}`)
 });
