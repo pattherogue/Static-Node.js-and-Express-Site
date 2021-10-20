@@ -1,7 +1,7 @@
 {
   "name": "project-6",
   "version": "1.0.0",
-  "description": "project 6 ",
+  "description": "Node.js & Express",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
