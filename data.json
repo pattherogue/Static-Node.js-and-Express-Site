@@ -3,8 +3,8 @@
         {
             "id": 0,
             "project_name": "Data Pagination and Filtering",
-            "description": "fdalsfjsfja",
-            "comments": "jfkaldjfklaskjf",
+            "description": "Displays several pages of student data that allows user to easily view student's profile. ",
+        
             "technologies": ["Javascript", "CSS", "HTML", "Github", "Visual Studio Code"],
             "live_link": "https://pattherogue.github.io/Data-Pagination-and-Filtering/",
             "github_link": "https://github.com/pattherogue/Data-Pagination-and-Filtering",
@@ -18,8 +18,8 @@
         {
             "id": 1,
             "project_name": "Interactive Web Form",
-            "description": "fjdklafjsadk",
-            "comments": "jkjdsklfja",
+            "description": "Includes form validation and accessibility application. ",
+           
             "technologies": ["Javascript", "CSS", "HTML", "Github", "Visual Studio Code"],
             "live_link": "https://pattherogue.github.io/Interactive-Form-V2/",
             "github_link": "https://github.com/pattherogue/Interactive-Form-V2",
@@ -33,8 +33,8 @@
         {
             "id": 2,
             "project_name": "Public API Request",
-            "description": "jfkdajflkdjfncaaf",
-            "comments": "fjdkjalcsz",
+            "description": "Employee information wepage that request from third-party API.",
+          
             "technologies": ["Javascript", "CSS", "HTML", "Fetch and Public APIs", "OOP", "Github", "Visual Studio Code" ],
             "live_link": "https://pattherogue.github.io/Public-API-Request/",
             "image_urls": [
@@ -47,7 +47,7 @@
         {
             "id": 3,
             "project_name": "Random Quote Generator",
-            "description": "fjdajwieowerw",
+            "description": "Generates random quotes upon click",
             "technologies": ["Javascript", "CSS", "HTML", "GitHub", "Visual Studio Code"],
             "live_link": "https://pattherogue.github.io/Random-Quote-Generator/",
             "image_urls": [
@@ -59,8 +59,8 @@
 
         {
             "id": 4,
-            "project_name": "Random Quote Generator",
-            "description": "fjdajarfacdsdwerw",
+            "project_name": "OOP Game Show App",
+            "description": "Phrase guessing game which selects random letters to reveal random phrase.",
             "technologies": ["Javascript", "CSS", "HTML", "GitHub", "Visual Studio Code"],
             "live_link": "https://pattherogue.github.io/OOP-Game-Show-App/",
             "image_urls": [

@@ -6,6 +6,8 @@ const app = express();
 const path = require('path');
 const { projects } = require('./data.json');
 
+app.use(express.json());
+
 /* Setup middleware */
 /* set "view engine" to "pug" */
 app.set('view engine', 'pug');
