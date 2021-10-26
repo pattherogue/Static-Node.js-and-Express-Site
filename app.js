@@ -56,25 +56,22 @@ app.use((req, res, next) => {
 /* Global error handler */
 /* custom new Error() */
 app.use((err, req, res, next) =>{
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') == 'development' ? err: {};
     /* status property 404 */
     if(err.status === 404) {
           /* err.status property */
-        res.status(err.statusCode);
+        res.status(404).render('page-not-found', { err });
         /* message property user friendly message */
         err.message = 'Page not found.';
         /* log out err object's message and status */
-        console.log(`${err.statusCode}: ${err.message}`);
-        res.render('page-not-found', {err});
+        console.log(`${err.status}: ${err.message}`);
     } else {
         
         /* err.message */
-        res.status(err.statusCode || 500);
+        res.status(err.status || 500).render('error', { err });
         err.message = 'Problem with server.'
         /* log out err object's message and status */
-        console.log(`{err.statusCOde}: ${err.message}`);
-        res.render('error', {err});
+        console.log(`{err.status}: ${err.message}`);
+        
     }
 });
 
