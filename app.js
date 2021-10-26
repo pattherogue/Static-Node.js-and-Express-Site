@@ -15,8 +15,8 @@ app.use('/static', express.static('public'));
 /* "index" route */
 app.get('/', (req, res) => {
     res.locals = data.projects;
-    const projects = data.projectss;
-    res.render('index', {projects: projects});
+    const projects = data.projects;
+    res.render('index', {project: projects});
 });
 /* "about" route */
 app.get('/about', (req, res) => {
