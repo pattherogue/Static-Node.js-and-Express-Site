@@ -13,21 +13,21 @@ app.use('/static', express.static('public'));
 
 /* Set routes */
 /* "index" route */
-app.get('/', (req, res, next) => {
+app.get('/', (req, res) => {
     res.locals = data.projects;
     const projects = data.projectss;
     res.render('index', {projects: projects});
 });
 /* "about" route */
-app.get('/about', (req, res, next) => {
+app.get('/about', (req, res) => {
     res.render('about');
 });
 /* Dynamic "project" routes */
 app.get('/project/:id', (req, res, next) => {
     const projectId = req.params.id;
-    const project = projects[projectId];
+    const project = data.projects[projectId];
         if (project) {
-            res.render('project', { projects })
+            res.render('project', project)
         } else {
             next(newError(404));
         }
