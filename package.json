@@ -1,10 +1,9 @@
 {
   "name": "project-6",
   "version": "1.0.0",
-  "description": "Node.js & Express",
+  "description": "Project 6 Fullstack Javascript",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,9 +15,5 @@
   "bugs": {
     "url": "https://github.com/pattherogue/Static-Node.js-and-Express-Site/issues"
   },
-  "homepage": "https://github.com/pattherogue/Static-Node.js-and-Express-Site#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "pug": "^3.0.2"
-  }
+  "homepage": "https://github.com/pattherogue/Static-Node.js-and-Express-Site#readme"
 }
