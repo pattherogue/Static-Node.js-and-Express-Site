@@ -16,8 +16,8 @@ block content
 
     each item in projects 
     project.cell 
-    a(href=`/projects/${project.id}`)
-      img.thumbnail(src=`${project.image_urls[0]`, height = '250px', width = '250px', alt = `Screenshot of ${project.project_name} Project}).centered_text
+    a(href=`/projects/${item .id}`)
+      img.thumbnail(src=`${item.image_urls[0]}`, height = '250px', width = '250px', alt = `Screenshot of ${item .project_name}` Project).centered_text      
       h5 = item.project_name
       
 

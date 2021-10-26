@@ -17,7 +17,7 @@ app.use('/static', express.static('public'));
 /* Set routes */
 /* "index" route */
 app.get('/', (req, res) => {
-    res.locals=data.projects;
+    res.locals = data.projects;
     const projects = data.projects
     res.render('index', {projects: projects});
 });
@@ -80,5 +80,5 @@ app.use((err, req, res, next) =>{
 /* listen port 3000 */
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log(`Application is now running on local host port: ${PORT}`)
+    console.log(`Application is now running on local host port: ${port}`)
 });

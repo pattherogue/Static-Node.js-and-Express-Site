@@ -34,7 +34,7 @@ block content
     .project-img-box.box
         each item in image_urls
       //- Replace the URLs in the src attributes below with interpolated template literals to dynamically add your project images, and add descriptions to the alt attributes
-      img.project-img(src= item, alt='Screenshot of ${project_name} Project')
+      img.project-img(src= item, alt= `Screenshot of ${project_name}`)
   
     
 
