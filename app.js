@@ -3,10 +3,7 @@
 /*  Variables for necessary dependencies */
 const express = require('express');
 const app = express();
-const path = require('path');
-const { projects } = require('./data.json');
-
-app.use(express.json());
+const data = require('./data.json');
 
 /* Setup middleware */
 /* set "view engine" to "pug" */
@@ -17,7 +14,9 @@ app.use('/static', express.static('public'));
 /* Set routes */
 /* "index" route */
 app.get('/', (req, res, next) => {
-    res.render('index', { projects });
+    res.locals = data.projects;
+    const projects = data.projectss;
+    res.render('index', {projects: projects});
 });
 /* "about" route */
 app.get('/about', (req, res, next) => {
@@ -26,7 +25,7 @@ app.get('/about', (req, res, next) => {
 /* Dynamic "project" routes */
 app.get('/project/:id', (req, res, next) => {
     const projectId = req.params.id;
-    const project = projects[id];
+    const project = projects[projectId];
         if (project) {
             res.render('project', { projects })
         } else {
