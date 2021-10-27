@@ -3,7 +3,7 @@
 /*  Variables for necessary dependencies */
 const express = require('express');
 const app = express();
-const {projects} = require('./data.json');
+const dataJson = require('./data.json');
 
 
 /* Setup middleware */
@@ -15,7 +15,7 @@ app.use('/static', express.static('public'));
 /* Set routes */
 /* "index" route */
 app.get('/', (req, res) => {
-    res.render('index', {projects});
+    res.render('index', {projects: dataJson);
 });
 /* "about" route */
 app.get('/about', (req, res) => {
@@ -24,7 +24,7 @@ app.get('/about', (req, res) => {
 /* Dynamic "project" routes */
 app.get('/projects/:id', (req, res) => {
     const id = req.params.id;
-    const projectVar = data.projects[id];
+    const projectVar = dataJson.projects[id];
         if (projectVar) {
             res.render('project', {projects});
         } else {
@@ -75,7 +75,7 @@ app.use((err, req, res, next) =>{
 });
 
 /* listen port 3000 */
-const port = 5500;
+const port = 3000;
 app.listen(port, () => {
     console.log(`Application is now running on local host port: ${port}`)
 });
