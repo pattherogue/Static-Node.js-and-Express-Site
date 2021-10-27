@@ -15,7 +15,9 @@ app.use('/static', express.static('public'));
 /* Set routes */
 /* "index" route */
 app.get('/', (req, res) => {
-    res.render('index', {projects: dataJson);
+    res.locals = dataJson.projects;
+    const projects = dataJson.projects;
+    res.render('index', {projects: dataJson});
 });
 /* "about" route */
 app.get('/about', (req, res) => {
@@ -26,7 +28,7 @@ app.get('/projects/:id', (req, res) => {
     const id = req.params.id;
     const projectVar = dataJson.projects[id];
         if (projectVar) {
-            res.render('project', {projects});
+            res.render('project', projectVar);
         } else {
             const err = new Error;
             err.status = 404;
