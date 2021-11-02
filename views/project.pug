@@ -29,12 +29,13 @@ block content
 
         //- Add the href values to the links below
         a.btn-link(href=`${project.live_link}`, target = 'blank') Live Demo
-        a.btn-link(href=`${project.github_link}`, target='blank') GitHub Repo
+        a.btn-link(href=`${project.github_link}`, target= 'blank') GitHub Repo
 
     .project-img-box.box
         each image in image_urls
       //- Replace the URLs in the src attributes below with interpolated template literals to dynamically add your project images, and add descriptions to the alt attributes
-      img.project-img(src= `${project.image_urls}`, alt= `Screenshot of ${project.project_name}`)
+      img.project-img(src= `${project.image_urls[1]}`, alt= `Screenshot of ${project.project_name}`)
+      img.project-img(src= `${project.image_urls[2]}`, alt= `Screenshot of ${project.project_name}`)
   
     
 

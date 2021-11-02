@@ -30,7 +30,10 @@ app.get('/projects/:id', (req, res, next) => {
         if (project) {
             res.render('project', {project});
     } else {
-            next();
+            const err = new Error;
+            err.status = 404
+            err.message = `Project ${id} does not exist`;
+            next(err);
         }
 });
 
