@@ -2,22 +2,21 @@
 
 /*  Variables for necessary dependencies */
 const express = require('express');
+const {projects} = require('./data.json');
 const app = express();
-const dataJson = require('./data.json');
+/* static route and express.static method serve public folder */
+app.use('/static', express.static('public'));
 
+app.use(express.json());
 
 /* Setup middleware */
 /* set "view engine" to "pug" */
 app.set('view engine', 'pug');
-/* static route and express.static method serve public folder */
-app.use('/static', express.static('public'));
 
 /* Set routes */
 /* "index" route */
 app.get('/', (req, res) => {
-    res.locals = dataJson.projects;
-    const projects = dataJson.projects;
-    res.render('index', {projects: dataJson});
+    res.render('index', {projects});
 });
 /* "about" route */
 app.get('/about', (req, res) => {
@@ -26,14 +25,11 @@ app.get('/about', (req, res) => {
 /* Dynamic "project" routes */
 app.get('/projects/:id', (req, res) => {
     const id = req.params.id;
-    const projectVar = dataJson.projects[id];
-        if (projectVar) {
-            res.render('project', projectVar);
+    const project = projects[id];
+        if (project) {
+            res.render('project', { project });
         } else {
-            const err = new Error;
-            err.status = 404;
-            err.message = `Project ${id} is unavailable.`;
-            next(err);
+            next();
         }
 });
 
@@ -50,8 +46,8 @@ app.get('/error', (req, res, next) => {
 
 /* 404 error handle */
 app.use((req, res, next) => {
-    console.log("404 error handler called");
-    res.status(404).render('page-not-found');
+    const err = new Error('Page does not exist');
+    next(err);
 });
 
 /* Global error handler */
@@ -77,7 +73,7 @@ app.use((err, req, res, next) =>{
 });
 
 /* listen port 3000 */
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Application is now running on local host port: ${port}`)
 });
