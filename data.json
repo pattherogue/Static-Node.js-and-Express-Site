@@ -8,9 +8,9 @@
             "live_link": "https://pattherogue.github.io/Data-Pagination-and-Filtering/",
             "github_link": "https://github.com/pattherogue/Data-Pagination-and-Filtering",
             "image_urls": [
-                "/static/img/Project_5_Thumbnail.jpg",
-                "/static/img/Project_5_Overview.jpg", 
-                "/static/img/Project_5_Bottom.jpg"
+                "/static/images/Project_5_Thumbnail.jpg",
+                "/static/images/Project_5_Overview.jpg", 
+                "/static/images/Project_5_Bottom.jpg"
             ]
         },
 
@@ -22,9 +22,9 @@
             "live_link": "https://pattherogue.github.io/Interactive-Form-V2/",
             "github_link": "https://github.com/pattherogue/Interactive-Form-V2",
             "image_urls": [
-                "/static/img/Project_4_Thumbnail.jpg",
-                "/static/img/Project_4_Overview.jpg",
-                "static/img?project_4_Bottom.jpg"
+                "/static/images/Project_4_Thumbnail.jpg",
+                "/static/images/Project_4_Overview.jpg",
+                "/static/images?project_4_Bottom.jpg"
             ]
         },
 
@@ -35,9 +35,9 @@
             "technologies": ["Javascript", "CSS", "HTML", "Fetch and Public APIs", "OOP", "Github", "Visual Studio Code" ],
             "live_link": "https://pattherogue.github.io/Public-API-Request/",
             "image_urls": [
-                "/static/img/Project_3_Thumbnail.jpg",
-                "static/img/Project_3_Overview.jpg",
-                "static/img/Project_3_Click.jpg"
+                "/static/images/Project_3_Thumbnail.jpg",
+                "/static/images/Project_3_Overview.jpg",
+                "/static/images/Project_3_Click.jpg"
             ] 
         },
 
@@ -48,9 +48,9 @@
             "technologies": ["Javascript", "CSS", "HTML", "GitHub", "Visual Studio Code"],
             "live_link": "https://pattherogue.github.io/Random-Quote-Generator/",
             "image_urls": [
-                "/static/img/Project_2_Thumbnail.jpg",
-                "/static/img/Project_2_Overview.jpg",
-                "/static/img/Project_2_Bottom.jpg"
+                "/static/images/Project_2_Thumbnail.jpg",
+                "/static/images/Project_2_Overview.jpg",
+                "/static/images/Project_2_Bottom.jpg"
             ]
         },
 
@@ -61,9 +61,9 @@
             "technologies": ["Javascript", "CSS", "HTML", "GitHub", "Visual Studio Code"],
             "live_link": "https://pattherogue.github.io/OOP-Game-Show-App/",
             "image_urls": [
-               "/static/img/Project_1_Thumbnail.jpg",
-               "static/img/Project_1_Overview.jpg",
-               "static/img/Project_1_Bottom.jpg"
+               "/static/images/Project_1_Thumbnail.jpg",
+               "/static/images/Project_1_Overview.jpg",
+               "/static/images/Project_1_Bottom.jpg"
             ]
         }
 

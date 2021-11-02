@@ -16,7 +16,7 @@ app.use('/static', express.static('public'));
 
 /* Set routes */
 /* "index" route */
-app.get('/', (req, res) => {
+app.get('/', (req, res, next) => {
     res.render('index', {projects});
 });
 /* "about" route */
@@ -29,9 +29,16 @@ app.get('/projects/:id', (req, res, next) => {
     const project = projects[id];
         if (project) {
             res.render('project', {project});
-        } else {
+    } else {
             next();
         }
+});
+
+app.get('/error', (req, res, next) => {
+    const err = new Error();
+    err.message = 'Custom 500 error thrown'
+    err.status = 500;
+    throw err;
 });
 
 /* 404 error handle */
@@ -46,26 +53,18 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) =>{
     /* status property 404 */
     if(err.status === 404) {
+        /* message property user friendly message */
         err.message = 'File not found';
         res.locals.err = err;
         res.status(err.status);
         res.render('error');
-        /* err.status property */
-    
-        /* message property user friendly message */
-   
-        /* log out err object's message and status */
-
     } else {
+        /* err.message */
         err.message = 'Issue with server';
         res.status = err.status;
         res.render('error');
-
-        /* err.message */
-
-        /* log out err object's message and status */
     }
-
+    /* log out err object's message and status */
     console.log(err.status, err.message);
 });
 
