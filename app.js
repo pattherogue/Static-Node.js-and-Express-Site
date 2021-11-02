@@ -2,7 +2,7 @@
 
 /*  Variables for necessary dependencies */
 const express = require('express');
-const {projects} = require('./data.json');
+const { projects } = require('./data.json');
 const app = express();
 
 
@@ -17,7 +17,7 @@ app.use('/static', express.static('public'));
 /* Set routes */
 /* "index" route */
 app.get('/', (req, res, next) => {
-    res.render('index', {projects});
+    res.render('index', { projects });
 });
 /* "about" route */
 app.get('/about', (req, res) => {
@@ -28,7 +28,7 @@ app.get('/projects/:id', (req, res, next) => {
     const id = req.params.id;
     const project = projects[id];
         if (project) {
-            res.render('project', {project});
+            res.render('project', { project });
     } else {
             const err = new Error;
             err.status = 404
