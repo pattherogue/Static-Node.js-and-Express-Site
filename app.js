@@ -4,14 +4,15 @@
 const express = require('express');
 const {projects} = require('./data.json');
 const app = express();
-/* static route and express.static method serve public folder */
-app.use('/static', express.static('public'));
+
 
 app.use(express.json());
 
 /* Setup middleware */
 /* set "view engine" to "pug" */
 app.set('view engine', 'pug');
+/* static route and express.static method serve public folder */
+app.use('/static', express.static('public'));
 
 /* Set routes */
 /* "index" route */
@@ -27,7 +28,7 @@ app.get('/projects/:id', (req, res) => {
     const id = req.params.id;
     const project = projects[id];
         if (project) {
-            res.render('project', { project });
+            res.render('project', {project});
         } else {
             next();
         }
