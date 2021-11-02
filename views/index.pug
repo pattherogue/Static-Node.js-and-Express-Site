@@ -15,10 +15,11 @@ block content
     .projects-box.box.grid
 
     each project in projects 
-    project.cell 
-    a(href=`/projects/${projects.id}`)
-      img.thumbnail(src=`${project.image_urls[0]}`, height = '250px', width = '250px', alt = `Screenshot of ${project.project_name}` Project).centered_text      
-      h5 #{project.project_name}
-      p Skills: #{project.technologies}
+      project.cell 
+        a(href=`/projects/${projects.id}`)
+          img.thumbnail(src=`${project.image_urls[0]}`, height = '250px', width = '250px', alt = `Screenshot of ${project.project_name}` Project)
+          .centered_text      
+            h5 #{project.project_name}
+            p Skills: #{project.technologies}
       
 
