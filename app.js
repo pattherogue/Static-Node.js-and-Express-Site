@@ -34,20 +34,10 @@ app.get('/projects/:id', (req, res) => {
         }
 });
 
-/* show 500 error */
-app.get('/error', (req, res, next) => {
-
-    /* Error log */
-    console.log('New error message and status properties')
-    const err = new Error();
-    err.message = 'Custom 500 error thrown'
-    err.status = 500;
-    throw err;
-});
-
 /* 404 error handle */
 app.use((req, res, next) => {
-    const err = new Error('Page does not exist');
+    const err = new Error('Not Found');
+    err.status = 404;
     next(err);
 });
 
@@ -56,21 +46,27 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) =>{
     /* status property 404 */
     if(err.status === 404) {
-          /* err.status property */
-        res.status(404).render('page-not-found', { err });
+        err.message = 'File not found';
+        res.locals.err = err;
+        res.status(err.status);
+        res.render('error');
+        /* err.status property */
+    
         /* message property user friendly message */
-        err.message = 'Page not found.';
+   
         /* log out err object's message and status */
-        console.log(`${err.status}: ${err.message}`);
+
     } else {
-        
+        err.message = 'Issue with server';
+        res.status = err.status;
+        res.render('error');
+
         /* err.message */
-        res.status(err.status || 500).render('error', { err });
-        err.message = 'Problem with server.'
+
         /* log out err object's message and status */
-        console.log(`{err.status}: ${err.message}`);
-        
     }
+
+    console.log(err.status, err.message);
 });
 
 /* listen port 3000 */

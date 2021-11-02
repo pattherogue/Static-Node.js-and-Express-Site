@@ -1,6 +1,6 @@
 extends layout
 
 block content
-  h1 Error has occured
-  h2 Error Status #{err.status}
-  h3 Error Message: ${err.message}
+  h1= err.message 
+  h2= error.status 
+  pre= error.stack 
