@@ -28,7 +28,7 @@ app.get('/projects/:id', (req, res, next) => {
     const id = req.params.id;
     const project = projects[id];
         if (project) {
-            res.render('project', { project });
+            res.render('project', { projects });
     } else {
             const err = new Error;
             err.status = 404
