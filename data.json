@@ -34,6 +34,7 @@
             "description": "Employee information wepage that request from third-party API.",
             "technologies": ["Javascript", "CSS", "HTML", "Fetch and Public APIs", "OOP", "Github", "Visual Studio Code" ],
             "live_link": "https://pattherogue.github.io/Public-API-Request/",
+            "github_link": "https://github.com/pattherogue/Public-API-Request",
             "image_urls": [
                 "/static/images/Project_3_Thumbnail.jpg",
                 "/static/images/Project_3_Overview.jpg",
@@ -47,6 +48,7 @@
             "description": "Generates random quotes upon click",
             "technologies": ["Javascript", "CSS", "HTML", "GitHub", "Visual Studio Code"],
             "live_link": "https://pattherogue.github.io/Random-Quote-Generator/",
+            "github_link": "https://github.com/pattherogue/Random-Quote-Generator",
             "image_urls": [
                 "/static/images/Project_2_Thumbnail.jpg",
                 "/static/images/Project_2_Overview.jpg",
@@ -60,6 +62,7 @@
             "description": "Phrase guessing game which selects random letters to reveal random phrase.",
             "technologies": ["Javascript", "CSS", "HTML", "GitHub", "Visual Studio Code"],
             "live_link": "https://pattherogue.github.io/OOP-Game-Show-App/",
+            "github_link": "https://github.com/pattherogue/OOP-Game-Show-App",
             "image_urls": [
                "/static/images/Project_1_Thumbnail.jpg",
                "/static/images/Project_1_Overview.jpg",
