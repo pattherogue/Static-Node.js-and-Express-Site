@@ -54,17 +54,12 @@ app.use((req, res, next) => {
 /* Global error handler */
 /* custom new Error() */
 app.use((err, req, res, next) =>{
-    /* status property 404 */
-    
     /* message property user friendly message */
     const err = new Error('Hi there, page not found');
+     /* status property 404 */
     err.status = 404;
+     /* err.message */
     next(err);
-    /* err.message */
-    
-    
-    /* log out err object's message and status */
-
 });
 
 /* listen port 3000 */
