@@ -55,20 +55,16 @@ app.use((req, res, next) => {
 /* custom new Error() */
 app.use((err, req, res, next) =>{
     /* status property 404 */
-    if(err.status === 404) {
-        /* message property user friendly message */
-        err.message = 'File not found';
-        res.locals.err = err;
-        res.status(err.status);
-        res.render('error');
-    } else {
-        /* err.message */
-        err.message = 'Issue with server';
-        res.status = err.status;
-        res.render('error');
-    }
+    
+    /* message property user friendly message */
+    const err = new Error('Hi there, page not found');
+    err.status = 404;
+    next(err);
+    /* err.message */
+    
+    
     /* log out err object's message and status */
-    console.log(err.status, err.message);
+
 });
 
 /* listen port 3000 */
