@@ -54,12 +54,18 @@ app.use((req, res, next) => {
 /* Global error handler */
 /* custom new Error() */
 app.use((err, req, res, next) =>{
-    /* message property user friendly message */
-    const err = new Error('Hi there, page not found');
-     /* status property 404 */
-    err.status = 404;
-     /* err.message */
-    next(err);
+
+    /* status property 404 */  
+    if(err.status === 404) {
+        /* message property user friendly message */ 
+        console.log("The 404 Error Handler Has Been Called");
+        res.status(404).render('page-not-found', { err });
+    /* status property 500 */
+    } else {
+        /* message property user friendly message */ 
+        console.log("The 500 Error Handler Has Been Called");
+        res.status(err.status || 500).render('error', { err });
+    }
 });
 
 /* listen port 3000 */
